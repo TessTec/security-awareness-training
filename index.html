@@ -18,6 +18,7 @@
       border-radius: 10px;
       width: 300px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
     input {
       width: 100%;
@@ -32,6 +33,11 @@
       border: none;
       cursor: pointer;
     }
+    #message {
+      color: red;
+      display: none;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
@@ -44,11 +50,15 @@
   <input type="password" placeholder="Password">
 
   <button onclick="showMessage()">Update Password</button>
+
+  <p id="message">
+    This was a cybersecurity training exercise. No data has been collected.
+  </p>
 </div>
 
 <script>
 function showMessage() {
-  alert("This was a cybersecurity training exercise. No data has been collected.");
+  document.getElementById("message").style.display = "block";
 }
 </script>
 
